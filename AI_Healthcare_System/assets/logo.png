@@ -1,0 +1,199 @@
+import streamlit as st
+import pandas as pd
+import os
+
+# ---------------- PAGE CONFIG ---------------- #
+
+st.set_page_config(
+    page_title="AI Healthcare System",
+    page_icon="🏥",
+    layout="wide"
+)
+
+# ---------------- LOAD CSS ---------------- #
+
+def load_css():
+    css_file = "assets/styles.css"
+
+    if os.path.exists(css_file):
+        with open(css_file) as f:
+            st.markdown(
+                f"<style>{f.read()}</style>",
+                unsafe_allow_html=True
+            )
+
+load_css()
+
+# ---------------- SIDEBAR ---------------- #
+
+st.sidebar.image(
+    "assets/logo.png",
+    width=180
+)
+
+st.sidebar.title("🏥 Healthcare AI")
+
+st.sidebar.success(
+    "AI-Powered Healthcare Platform"
+)
+
+# ---------------- HEADER ---------------- #
+
+st.title(
+    "🏥 AI-Powered Healthcare Prediction & Resource Management System"
+)
+
+st.markdown(
+    """
+### Welcome to the Healthcare Intelligence Platform
+
+This platform helps hospitals improve patient care through Artificial Intelligence, Machine Learning, and Resource Optimization.
+"""
+)
+
+st.markdown("---")
+
+# ---------------- KPI DASHBOARD ---------------- #
+
+st.subheader("📊 Hospital Overview")
+
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    st.metric(
+        "👨‍⚕️ Patients",
+        "1,245",
+        "+12%"
+    )
+
+with col2:
+    st.metric(
+        "🩺 Doctors",
+        "85",
+        "+5%"
+    )
+
+with col3:
+    st.metric(
+        "🛏 Beds Occupied",
+        "320",
+        "+8%"
+    )
+
+with col4:
+    st.metric(
+        "📅 Appointments",
+        "540",
+        "+20%"
+    )
+
+st.markdown("---")
+
+# ---------------- MODULES ---------------- #
+
+st.subheader("🚀 Available Modules")
+
+st.markdown("""
+<div class='card'>
+<ul>
+<li>👤 Patient Management</li>
+<li>👨‍⚕️ Doctor Management</li>
+<li>📅 Appointment Scheduling</li>
+<li>📄 Electronic Health Records (EHR)</li>
+<li>🧠 AI Disease Prediction</li>
+<li>💊 Treatment Recommendation</li>
+<li>📈 Outcome Prediction</li>
+<li>🛏 Bed Management</li>
+<li>👩‍⚕️ Staff Scheduling</li>
+<li>📦 Resource Allocation</li>
+<li>📑 Medical Report Analysis</li>
+<li>🤖 AI Chatbot Assistant</li>
+<li>📊 Analytics Dashboard</li>
+<li>🔔 Notifications</li>
+<li>📋 Reports</li>
+</ul>
+</div>
+""",
+unsafe_allow_html=True)
+
+st.markdown("---")
+
+# ---------------- FEATURES ---------------- #
+
+st.subheader("✨ Key Features")
+
+c1, c2, c3 = st.columns(3)
+
+with c1:
+
+    st.info("""
+### 🤖 Artificial Intelligence
+
+✔ Disease Prediction
+
+✔ Treatment Suggestions
+
+✔ Outcome Forecasting
+
+✔ Medical Report Analysis
+""")
+
+with c2:
+
+    st.success("""
+### 🏥 Hospital Management
+
+✔ Bed Tracking
+
+✔ Staff Scheduling
+
+✔ Resource Allocation
+
+✔ Appointment Management
+""")
+
+with c3:
+
+    st.warning("""
+### 📊 Analytics
+
+✔ Patient Insights
+
+✔ Hospital KPIs
+
+✔ Resource Utilization
+
+✔ Performance Reports
+""")
+
+st.markdown("---")
+
+# ---------------- SAMPLE STATISTICS ---------------- #
+
+st.subheader("📈 System Statistics")
+
+chart_data = pd.DataFrame({
+    "Month": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "Patients": [120, 180, 220, 260, 300, 380]
+})
+
+st.line_chart(
+    chart_data.set_index("Month")
+)
+
+st.markdown("---")
+
+# ---------------- FOOTER ---------------- #
+
+st.markdown(
+    """
+<center>
+
+### 🏥 AI Healthcare System
+
+Developed using Streamlit, Machine Learning, Artificial Intelligence, and Healthcare Analytics.
+
+</center>
+""",
+    unsafe_allow_html=True
+)

@@ -1,0 +1,7 @@
+Appointment ID,Patient Name,Doctor Name,Date,Status,Patient,Doctor
+A1,Ravi,Dr. Kumar,2026-06-12,Pending,,
+,,,2026-06-12,Pending,,
+,,,2026-06-12,,,
+,,,2026-06-12,,Ravi,Dr.kumar
+,,,2026-06-23,,prassu,rajesh
+,,,2026-06-14,,shanvi,XYZ
