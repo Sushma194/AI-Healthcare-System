@@ -1,1 +1,3 @@
-notepad .gitignore
+.env
+*.env
+AI_Healthcare_System/.env
