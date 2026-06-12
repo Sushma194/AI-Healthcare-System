@@ -315,3 +315,6 @@ AI-Powered Healthcare Prediction & Resource Management System
 # 📜 License
 
 This project is developed for educational and academic purposes.
+
+
+Live Link  :   https://ai-healthcare-system-7.onrender.com
